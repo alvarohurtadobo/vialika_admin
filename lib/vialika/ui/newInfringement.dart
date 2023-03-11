@@ -24,6 +24,9 @@ class _ExampleDragTargetState extends State<ExampleDragTarget> {
         child: DropTarget(
           onDragDone: (detail) {
             print("done");
+            for (XFile myFile in detail.files){
+              print(myFile.path);
+            }
             setState(() {
               _list.addAll(detail.files);
             });
@@ -36,6 +39,7 @@ class _ExampleDragTargetState extends State<ExampleDragTarget> {
           },
           onDragExited: (detail) {
             print("exited");
+            
             setState(() {
               _dragging = false;
             });
@@ -46,7 +50,7 @@ class _ExampleDragTargetState extends State<ExampleDragTarget> {
             color: _dragging ? Colors.blue.withOpacity(0.4) : Colors.black26,
             child: _list.isEmpty
                 ? const Center(child: Text("Drop here"))
-                : Text(_list.join("\n")),
+                : Text(_list.map((e) => e.name).join("\n")),
           ),
         ),
       ),
