@@ -38,7 +38,7 @@ Widget vehicleTile(BuildContext context, Vehicle vehicle){
           leading: const Icon(Icons.warning),
           title: Text("Placa: ${vehicle.plateNumber}"),
           subtitle: Text("Modelo ${vehicle.model}"),
-          trailing: Icon(Icons.traffic),
+          trailing: const Icon(Icons.traffic),
         ),
         const Divider(
           height: 10,

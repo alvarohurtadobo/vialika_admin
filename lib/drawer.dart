@@ -50,6 +50,14 @@ Widget myDrawer(BuildContext context) {
           },
         ),
         ListTile(
+          title: const Text("Nueva Infracción"),
+          subtitle: const Text("Subir una nueva infracción"),
+          onTap: () {
+            Navigator.of(context).pushReplacementNamed("/newInfringement",
+                arguments: myInfringements[0]);
+          },
+        ),
+        ListTile(
             title: const Text("Historial"),
             subtitle: const Text("Muestra todas las infracciones"),
             onTap: () {

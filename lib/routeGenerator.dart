@@ -6,6 +6,7 @@ import 'package:vialika_admin/user/ui/verifySms.dart';
 import 'package:vialika_admin/vialika/model/infringement.dart';
 import 'package:vialika_admin/vialika/ui/history.dart';
 import 'package:vialika_admin/vialika/ui/homeView.dart';
+import 'package:vialika_admin/vialika/ui/newInfringement.dart';
 import 'package:vialika_admin/vialika/ui/newsView.dart';
 import 'package:vialika_admin/user/ui/vehiclesView.dart';
 import 'package:vialika_admin/vialika/ui/inquiriesView.dart';
@@ -24,6 +25,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => HomeView());
       case "/infringement":
         return MaterialPageRoute(builder: (_) => InfringementView(displayInfringement: args as Infringement));
+      case "/newInfringement":
+        return MaterialPageRoute(builder: (_) => const ExampleDragTarget());
       case "/driver":
         return MaterialPageRoute(builder: (_) => PerfilBody());
       case "/vehicles":
