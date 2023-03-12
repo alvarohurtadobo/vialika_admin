@@ -29,35 +29,39 @@ class _LoginViewState extends State<LoginView>{
             Container(
               width: 160,
               height: 160,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(image: AssetImage("assets/iconWhite.png"))
               ),
             ),
-            Text("Vialika", style: TextStyle(fontSize: 78, color: Colors.purple),),
-            Text("CONTROL DE TRÁFICO", style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),),
-            SizedBox(
+            const Text("Vialika", style: TextStyle(fontSize: 78, color: Colors.purple),),
+            const Text("CONTROL DE TRÁFICO", style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),),
+            const SizedBox(
               height: 100,
             ),
             Form(
               key: _formKey,
               child: Column(
                 children: [
-                  TextFormField(
-                    decoration: InputDecoration(
-                      labelText: "Número de teléfono",
-                      fillColor: Colors.white
-                      
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 180),
+                    child: TextFormField(
+                      decoration: const InputDecoration(
+                        labelText: "User Id",
+                        labelStyle: TextStyle(color: Colors.white),
+                        fillColor: Colors.white
+                        
+                      ),
+                      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 24),
+                      validator: (value){
+                        if(value!.isEmpty){
+                          return "Por favor ingrese su número de celular";
+                        }
+                        return null;
+                      },
+                      onChanged: (value){
+                        textInput = value;
+                      },
                     ),
-                    style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 24),
-                    validator: (value){
-                      if(value!.isEmpty){
-                        return "Por favor ingrese su número de celular";
-                      }
-                      return null;
-                    },
-                    onChanged: (value){
-                      textInput = value;
-                    },
                   ),
                   SizedBox(
                     height: 20,
