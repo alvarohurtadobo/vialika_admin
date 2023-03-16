@@ -13,12 +13,14 @@ Widget myDrawer(BuildContext context) {
         Container(
           width: 100,
           height: 100,
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(50)),
-          image: DecorationImage(
-              image: NetworkImage(
-                  'https://firebasestorage.googleapis.com/v0/b/vialika.appspot.com/o/assets%2Favatar.png?alt=media&token=bff67483-e6fa-4291-982f-b1aa8445395c'), fit: BoxFit.contain),
-        ), ),
+          decoration: const BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(50)),
+            image: DecorationImage(
+                image: NetworkImage(
+                    'https://firebasestorage.googleapis.com/v0/b/vialika.appspot.com/o/assets%2Favatar.png?alt=media&token=bff67483-e6fa-4291-982f-b1aa8445395c'),
+                fit: BoxFit.contain),
+          ),
+        ),
         Column(
           children: [
             Text(currentUser.name, style: const TextStyle(fontSize: 28)),
