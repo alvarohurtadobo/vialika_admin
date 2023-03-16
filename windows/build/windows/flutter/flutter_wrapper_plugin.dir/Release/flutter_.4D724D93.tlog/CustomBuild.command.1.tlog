@@ -1,0 +1,10 @@
+^C:\USERS\ALVARO\PROJECTS\VIALIKA_ADMIN\WINDOWS\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/alvaro/projects/vialika_admin/windows/windows -BC:/Users/alvaro/projects/vialika_admin/windows/build/windows --check-stamp-file C:/Users/alvaro/projects/vialika_admin/windows/build/windows/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
