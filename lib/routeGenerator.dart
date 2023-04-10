@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:vialika_admin/user/ui/login.dart';
 import 'package:vialika_admin/user/ui/profile.dart';
@@ -13,10 +12,10 @@ import 'package:vialika_admin/vialika/ui/inquiriesView.dart';
 import 'package:vialika_admin/vialika/ui/infringementView.dart';
 
 class RouteGenerator {
-  static Route<dynamic> generateRoute(RouteSettings settings){
+  static Route<dynamic> generateRoute(RouteSettings settings) {
     var args = settings.arguments;
 
-    switch(settings.name){
+    switch (settings.name) {
       case "/":
         return MaterialPageRoute(builder: (_) => LoginView());
       case "/verifySms":
@@ -24,7 +23,9 @@ class RouteGenerator {
       case "/home":
         return MaterialPageRoute(builder: (_) => HomeView());
       case "/infringement":
-        return MaterialPageRoute(builder: (_) => InfringementView(displayInfringement: args as Infringement));
+        return MaterialPageRoute(
+            builder: (_) =>
+                InfringementView(displayInfringement: args as Infringement));
       case "/newInfringement":
         return MaterialPageRoute(builder: (_) => const ExampleDragTarget());
       case "/driver":
@@ -43,16 +44,15 @@ class RouteGenerator {
   }
 }
 
-class ErrorView extends StatelessWidget{
+class ErrorView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Error"),
-      ),
-      body:  const Center(
-        child: Text("Error, vuelva a ingresar a el App"),
-      )
-    );
+        appBar: AppBar(
+          title: const Text("Error"),
+        ),
+        body: const Center(
+          child: Text("Error, vuelva a ingresar a el App"),
+        ));
   }
 }
